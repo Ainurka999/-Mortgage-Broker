@@ -1,0 +1,30 @@
+/* --- Museo Sans Cyrillic (положите файлы в public/fonts/) --- */
+@font-face { font-family:"Museo Sans Cyrl"; src:url("/fonts/MuseoSansCyrl-300.woff2") format("woff2"); font-weight:300; font-style:normal; font-display:swap; }
+@font-face { font-family:"Museo Sans Cyrl"; src:url("/fonts/MuseoSansCyrl-500.woff2") format("woff2"); font-weight:400 500; font-style:normal; font-display:swap; }
+@font-face { font-family:"Museo Sans Cyrl"; src:url("/fonts/MuseoSansCyrl-700.woff2") format("woff2"); font-weight:600 700; font-style:normal; font-display:swap; }
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+html, body { background: #070C15; }
+body { margin: 0; -webkit-font-smoothing: antialiased; color: #EAF6FB; font-family: "Museo Sans Cyrl", sans-serif; }
+
+/* Поля ввода — тёмные, светлый текст, читаемый плейсхолдер и нативные списки */
+input, select, textarea { color-scheme: dark; }
+input::placeholder, textarea::placeholder { color: #5F7488; opacity: 1; }
+select option { background: #0E1826; color: #EAF6FB; }
+/* автозаполнение не белым */
+input:-webkit-autofill, input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #EAF6FB;
+  -webkit-box-shadow: 0 0 0 1000px #0A1420 inset;
+  caret-color: #EAF6FB;
+}
+/* тонкий тёмный скроллбар */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #1E3550; border-radius: 6px; }
+::-webkit-scrollbar-track { background: #0A1420; }
+
+button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible {
+  outline: 2px solid #27D3EE; outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; } }
